@@ -1,4 +1,5 @@
 export function solveNQueens(n: number): string[][][] {
-    // Implementation will go here
+    if (n === 0) return [];
+    if (n === 1) return [[["#"]]];
     return [];
   }
