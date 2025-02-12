@@ -9,3 +9,7 @@ test('solveNQueens should return the correct solution for n = 1', () => {
     [["#"]]
   ]);
 });
+
+test('solveNQueens should return an empty array for n = 2', () => {
+  expect(solveNQueens(2)).toEqual([]);
+});
