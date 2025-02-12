@@ -42,4 +42,11 @@ test('solveNQueens should return correct solutions for n = 5', () => {
       solution.map(row => row.join(''))
     );
     expect(solutions.length).toBeGreaterThan(0);
-  });
+});
+
+test('solveNQueens should return correct solutions for n = 6', () => {
+    const solutions = solveNQueens(6).map(solution =>
+      solution.map(row => row.join(''))
+    );
+    expect(solutions.length).toBeGreaterThan(0);
+});
