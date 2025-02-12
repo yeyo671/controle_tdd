@@ -1,3 +1,9 @@
 # Ignorer les dépendances
 node_modules/
+package-lock.json
+
+# IDE et OS
+.idea/
+.vscode/
+.DS_Store
 
