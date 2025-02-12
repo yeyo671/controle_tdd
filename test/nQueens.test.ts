@@ -36,3 +36,10 @@ test('solveNQueens should return correct solutions for n = 4', () => {
     "O#OO"
   ]);
 });
+
+test('solveNQueens should return correct solutions for n = 5', () => {
+    const solutions = solveNQueens(5).map(solution =>
+      solution.map(row => row.join(''))
+    );
+    expect(solutions.length).toBeGreaterThan(0);
+  });
