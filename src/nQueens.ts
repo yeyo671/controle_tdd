@@ -17,6 +17,22 @@ export function solveNQueens(n: number): string[][][] {
         }
         return true;
     }
-    
-    return [];
+
+    function solve(col: number) {
+        if (col === n) {
+            solutions.push(board.map(row => row.slice()));
+            return;
+        }
+        for (let i = 0; i < n; i++) {
+            if (isSafe(board, i, col)) {
+                board[i][col] = '#';
+                solve(col + 1);
+                board[i][col] = 'O';
+            }
+        }
+    }
+
+    const solutions: string[][][] = [];
+    solve(0);
+    return solutions;
 }
